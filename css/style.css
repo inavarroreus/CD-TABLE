@@ -1,0 +1,391 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background: #535353;
+  font-size: 40px;
+  font-family: Muli;
+  font-size: 35px;
+}
+
+
+/*** LAYOUT ***/
+.ids{
+  float:left;
+  width: 264px;
+}
+
+.main-content{
+  float: right;
+  position: relative;
+  width: calc(100% - 264px);
+}
+
+.slider{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+.row{
+  width: 100%;
+  height: 86px;
+  background: #f3f3f3;
+  margin-bottom: 16px;
+  display: -webkit-flexbox;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  text-align: center;
+}
+
+.header .cell{
+  width: 100%;
+  height: 100%;
+  margin-right: 0px;
+  padding-top: 20px;
+}
+
+.cell{
+  height: 68px;
+  width: 250px;
+  overflow: hidden;
+  padding-top: 10px;
+  margin-right: 8px;
+}
+
+.cell.successful{
+  border: 1px solid #6acc6a;
+  background: #b6f8b6;
+  border-radius: 12px;
+  color: #4c844c;
+  font-weight: bold;
+}
+
+.cell.error{
+  border: 1px solid #dd4f4f;
+  background: #f8aeae;
+  border-radius: 12px;
+  color: #9e2525;
+  font-weight: bold;
+}
+
+.cell.working{
+  border: 1px solid #6acc6a;
+  background: #b6f8b6;
+  border-radius: 12px;
+  color: #4c844c;
+  font-weight: bold;
+}
+
+.cell.empty{
+  border: 1px solid #DEDEDE;
+  background: #DEDEDE;
+  border-radius: 12px;
+  color: black;
+  font-weight: bold;
+}
+
+.cell .icon{
+  width: 50%;
+  font-size: 30px;
+  text-align: center;
+  float: right;
+  height: calc(100% + 10px);
+  margin-top: -10px;
+  font-size: 40px;
+  padding-top: 10px;
+}
+/*** Main content styles ***/
+.main-content .row{
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.main-content .row.average{
+  background: #f3f3f3;
+}
+
+
+
+.main-content .row.average .cell span{
+  font-weight: bold;
+}
+/*** IDS STYLES ***/
+.ids .row{
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.ids .row .cell.logo{
+  background: #535353 !important;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border: none;
+}
+
+.ids .row .cell{
+  color: #535353 !important;
+  background: #f3f3f3 !important;
+  border: 1px solid #dcdcdc;
+  font-weight: normal !important;
+}
+
+.ids .row.average .cell{
+  font-size: 20px !important;
+  width: 100%;
+  height: 100%;
+  font-size: 40px;
+  background: #ededed !important;
+  border: none;
+}
+
+.ids .row.average .cell i{
+  font-size: 65px;
+  margin-top: 10px;
+  float: left;
+  margin-left: 15px;
+}
+
+.ids .row.average .cell span{
+  display: block;
+  float: right;
+  width: 173px;
+  text-align: left;
+  margin-top: 30px;
+}
+
+.ids .average{
+  font-size: 20px;
+}
+.job{
+  float:left;
+  margin-top: 11px;
+  text-align: center;
+  width: 130px;
+}
+
+.datetime{
+  float: right;
+  width: 117px;
+  padding: 8px;
+  background: #fff;
+  font-size: 20px !important;
+  text-align: center;
+}
+
+.day{
+  border-bottom: 1px solid #d5d5d5;
+  text-align: center;
+  padding-bottom: 2px;
+  float: left;
+  width: 100%;
+}
+
+.time{
+  float: left;
+  width: 100%;
+  margin-top: 5px;
+}
+
+/*** STATUS STYLES ***/
+.row.working .cell{
+
+}
+
+
+
+.row.working .cell .icon{
+  background: #8cec8c;
+}
+
+.row.error{
+  background: #f48c8c;
+}
+.row.error .cell{
+
+}
+
+.row.error .cell .icon{
+  background: #ff7575;
+}
+
+.row.successful{
+  background: #8fed8f;
+}
+.row.successful .cell{
+
+}
+
+/*** GENERIC ***/
+.header .cell:nth-child(odd){
+  background: #DEDEDE;
+}
+
+.header .cell:nth-child(even){
+  background: #ededed;
+}
+
+.header .cell:first-child{
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.header .cell:last-child{
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-bottomright: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+
+
+
+
+
+
+tr{
+  height: 86px;
+  margin-bottom: 20px;
+  background: white;
+  clear: both;
+}
+
+th{
+  width: 200px;
+  vertical-align: middle;
+}
+
+td{
+  width: 265px;
+  vertical-align: middle;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.td-wrapper{
+  height: 68px;
+  border:1px solid black;
+  width: 250px;
+  overflow: hidden;
+  padding-top: 10px;
+  margin: 0 auto;
+}
+
+.td-wrapper.head{
+  border: 1px solid #dcdcdc !important;
+  color: #535353 !important;
+  background: #f3f3f3 !important;
+}
+
+/**** TABLE STYLES ***/
+tr{
+  background: #f3f3f3;
+}
+
+
+
+/*** WORKING ***/
+
+tr.working .td-wrapper{
+  border: 1px solid #6acc6a;
+  background: #b6f8b6;
+  border-radius: 12px;
+  color: #4c844c;
+  font-weight: bold;
+}
+
+/*** ERROR ***/
+tr.error td{
+  background: #f48c8c;
+}
+
+tr.error .td-wrapper{
+  border: 1px solid #dd4f4f;
+  background: #f8aeae;
+  border-radius: 12px;
+  color: #9e2525;
+  font-weight: bold;
+}
+
+
+/*** SUCCESSFUL ***/
+tr.successful td{
+  background: #8fed8f;
+}
+
+tr.successful .td-wrapper{
+  border: 1px solid #6acc6a;
+  background: #b6f8b6;
+  border-radius: 12px;
+  color: #6acc6a;
+  font-weight: bold;
+}
+
+/**** AVERAGE ***/
+.average-title{
+  font-size: 21px;
+}
+
+.average-title i{
+  display: block;
+  height: 100%;
+}
+
+
+th:nth-child(2),td:first-child{
+  -webkit-border-top-left-radius: 12px;
+  -webkit-border-bottom-left-radius: 12px;
+  -moz-border-radius-topleft: 12px;
+  -moz-border-radius-bottomleft: 12px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+th:last-child, td:last-child{
+  -webkit-border-top-right-radius: 12px;
+  -webkit-border-bottom-right-radius: 12px;
+  -moz-border-radius-topright: 12px;
+  -moz-border-radius-bottomright: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+th:nth-child(even){
+  background: #DEDEDE;
+}
+
+td:nth-child(even){
+  background: #ededed;
+}
+
+th:nth-child(odd), td:nth-child(odd){
+  background: #F3F3F3;
+}
+
+
+th.logo{
+  background: #535353;
+}
+
+
+
+
+/*********/
+/* UTILS */
+/*********/
+.np{
+  padding: 0px !important;
+}
