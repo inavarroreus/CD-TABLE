@@ -56,13 +56,13 @@ function insertJobidRow(job){
   jobId.innerHTML = "#" + job.job;
   var dateTime = document.createElement("div");
   dateTime.className = "datetime";
-  var day = document.createElement("span");
-  day.className = "day";
+  var htmlDay = document.createElement("span");
+  htmlDay.className = "day";
   var time = document.createElement("span");
   time.className = "time";
-  day.innerHTML = day;
+  htmlDay.innerHTML = day;
   time.innerHTML = hour;
-  dateTime.appendChild(day);
+  dateTime.appendChild(htmlDay);
   dateTime.appendChild(time);
   cell.appendChild(jobId);
   cell.appendChild(dateTime);
@@ -180,7 +180,6 @@ function getStageCell(stage){
   return div;
 }
 
-
 function getStageCellClass(stage){
   switch (stage.result){
     case "OK" : return "successful";
@@ -201,7 +200,6 @@ function getStageElapsedTime(stage){
 }
 
 
-
 function getIconStageClass(stageClass){
   switch (stageClass){
     case "OK" : return "";
@@ -209,8 +207,6 @@ function getIconStageClass(stageClass){
     default : return "fa fa-close";
   }
 }
-
-
 
 
 /**** EXTEND ARRAY PROTOTYPE ****/
